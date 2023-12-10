@@ -25,6 +25,9 @@ builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 builder.Services.AddScoped<IServicesDal, EfServiceDal>();
 builder.Services.AddScoped<IServiceService, ServiceManager>();
 
+//AutoMapper Dahil Ettik
+builder.Services.AddAutoMapper(typeof(Program));
+
 //Consume etmek icin OtelApiCors adlý Policy olusturduk. Bunu En altta kullandýk
 builder.Services.AddCors(ops =>
 {
